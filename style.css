@@ -1,0 +1,4081 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+/* =========================
+   COVER
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.cover {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image: url("foto.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+
+    position: relative;
+}
+.cover::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.cover > * {
+    position: relative;
+    z-index: 1;
+}
+.judul {
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-weight: 300;
+    margin: 0 0 20px;
+}
+
+.cover h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 62px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 5px;
+}
+
+.dan {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 34px;
+    font-weight: 300;
+    margin: 2px;
+}
+
+.tanggal {
+    margin-top: 25px;
+    letter-spacing: 5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.cover button {
+    margin-top: 30px;
+
+    padding: 12px 30px;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    font-size: 15px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+.cover button {
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cover button:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.18);
+}
+.cover button:active {
+    transform: scale(0.95);
+}
+@media (max-width: 600px) {
+
+    .cover {
+        justify-content: flex-end;
+        padding-bottom: 60px;
+    }
+
+    .cover h1 {
+        font-size: 38px;
+    }
+
+    .judul {
+        font-size: 18px;
+    }
+
+    .dan {
+        font-size: 24px;
+    }
+
+    .tanggal {
+        font-size: 15px;
+        margin-top: 15px;
+    }
+
+    .cover button {
+        margin-top: 20px;
+        font-size: 13px;
+        padding: 10px 25px;
+    }
+
+}
+/* =========================
+   ANIMASI COVER
+   ========================= */
+
+.cover > * {
+    opacity: 0;
+    animation: munculCover 1s ease-out forwards;
+}
+
+.cover .judul {
+    animation-delay: 0.2s;
+}
+
+.cover h1:nth-of-type(1) {
+    animation-delay: 0.5s;
+}
+
+.cover .dan {
+    animation-delay: 0.8s;
+}
+
+.cover h1:nth-of-type(2) {
+    animation-delay: 1.1s;
+}
+
+.cover .tanggal {
+    animation-delay: 1.4s;
+}
+
+.cover .kepada {
+    animation-delay: 1.7s;
+}
+
+.cover .nama-tamu {
+    animation-delay: 2.0s;
+}
+
+.cover button {
+    animation-delay: 2.3s;
+}
+
+@keyframes munculCover {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   NAMA TAMU
+   ========================= */
+
+.kepada {
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.nama-tamu {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+/* =========================
+   TOMBOL MUSIK
+   ========================= */
+
+#tombolMusik {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    z-index: 1000;
+}
+/* =========================
+   PEMBUKA HOME
+   ========================= */
+
+.pembuka {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pembuka .judul {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+    letter-spacing: 6px;
+    font-weight: 600;
+
+    margin: 0 0 25px;
+
+    color: #4a4a4a;
+}
+
+.pembuka .judul::after {
+    content: "✦";
+
+    display: block;
+
+    margin: 12px auto 0;
+
+    font-size: 10px;
+
+    color: #555;
+}
+
+.pembuka h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 64px;
+    font-weight: 600;
+
+    line-height: 1.05;
+    letter-spacing: 1px;
+
+    margin: 0;
+
+    color: #303030;
+}
+
+.dan-home {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 32px;
+    font-weight: 600;
+
+    margin: 8px 0;
+
+    color: #555;
+}
+
+.pembuka .tanggal {
+    margin-top: 30px;
+
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: 600;
+
+    color: #555;
+}
+/* =========================
+   RESPONSIVE HOME
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .pembuka {
+        padding: 60px 25px;
+    }
+
+    .pembuka .judul {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .pembuka h1 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 1.05;
+        letter-spacing: 1px;
+    }
+
+    .dan-home {
+        font-size: 26px;
+        font-weight: 600;
+        margin: 6px 0;
+    }
+
+    .pembuka .tanggal {
+        font-size: 14px;
+        letter-spacing: 3px;
+        font-weight: 600;
+        color: #555;
+}
+    .countdown .subjudul {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+    }
+
+    .countdown h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 25px !important;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    }
+
+    .waktu {
+    width: 90%;
+    gap: 4px;
+    justify-content: center;
+    }
+    .countdown .teks-save {
+    font-size: 9px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+    }
+    .waktu div {
+    min-width: 0;
+    width: 38px;
+    }
+
+    .waktu span {
+    font-size: 18px;
+    }
+
+    .waktu small {
+    font-size: 9px;
+    letter-spacing: 1px;
+    }
+    .countdown .waktu {
+    width: 85% !important;
+    gap: 4px !important;
+    }
+
+    .countdown .waktu div {
+    width: 42px !important;
+    min-width: 42px !important;
+
+    padding: 8px 3px;
+    }
+
+   .countdown .waktu span {
+    font-size: 21px !important;
+    }
+
+   .kalender {
+    padding: 8px 18px !important;
+    font-size: 9px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 20px;
+    }
+    .mempelai h2 {
+    font-size: 36px !important;
+    }
+    .mempelai .subjudul {
+    font-size: 14px !important;
+    letter-spacing: 3px;
+    }
+    }
+
+
+/* =========================
+   ANIMASI PEMBUKA HOME
+   ========================= */
+
+.pembuka > * {
+    opacity: 0;
+    animation: munculHome 1s ease-out forwards;
+}
+
+.pembuka .judul {
+    animation-delay: 0.3s;
+}
+
+.pembuka h1:nth-of-type(1) {
+    animation-delay: 0.6s;
+}
+
+.pembuka .dan-home {
+    animation-delay: 0.9s;
+}
+
+.pembuka h1:nth-of-type(2) {
+    animation-delay: 1.2s;
+}
+
+.pembuka .tanggal {
+    animation-delay: 1.5s;
+}
+
+@keyframes munculHome {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   COUNTDOWN
+   ========================= */
+
+.countdown {
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+.countdown .subjudul {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 20px;
+    letter-spacing: 7px;
+    font-weight: 400;
+
+    margin: 0 0 18px;
+
+    color: #555;
+}
+.countdown .subjudul::after {
+    content: "✦";
+
+    display: block;
+
+    margin: 12px auto 0;
+
+    font-size: 10px;
+
+    color: #999;
+}
+
+.countdown h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    letter-spacing: 5px;
+
+    margin: 0 0 18px;
+
+    color: #333;
+}
+.countdown .teks-save {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 300;
+
+    margin: 0 0 35px;
+
+    color: #888;
+}
+.waktu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 35px;
+}
+
+.waktu div {
+    width: 70px;
+    min-width: 70px;
+
+    padding: 12px 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 1px solid rgba(80, 80, 80, 0.25);
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.25);
+    transition: transform 0.3s ease; 
+}
+.waktu div:hover,
+.waktu div:active {
+    transform: translateY(-5px);
+}
+.waktu span {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+    font-weight: 400;
+
+    line-height: 1;
+
+    color: #444;
+
+    transition: transform 0.3s ease;
+}
+.waktu div:hover span,
+.waktu div:active span {
+    transform: scale(1.08);
+}
+.waktu small {
+    margin-top: 8px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    color: #888;
+}
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.countdown::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: rgba(80, 80, 80, 0.35);
+    margin-top: 35px;
+}
+.kalender {
+    margin-top: 18px;
+    padding: 11px 24px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 1px solid rgba(80, 80, 80, 0.35);
+    border-radius: 25px;
+
+    background: transparent;
+    color: #777;
+
+    font-size: 11px;
+    font-weight: 300;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: all 0.3s ease;
+}
+
+.kalender:hover {
+    background: rgba(80, 80, 80, 0.08);
+    transform: translateY(-2px);
+}
+
+.kalender:active {
+    transform: scale(0.96);
+}
+
+.kalender::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    width: 0;
+    height: 1px;
+
+    background: #555;
+
+    transition: all 0.3s ease;
+
+    transform: translateX(-50%);
+}
+
+.kalender:hover::after {
+    width: 60%;
+}
+
+/* =========================
+   MEMPELAI
+   ========================= */
+
+.mempelai {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: #333;
+}
+
+.mempelai .subjudul {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    letter-spacing: 5px;
+    font-weight: 400;
+
+    margin: 0 0 25px;
+
+    color: #555;
+}
+
+.mempelai .subjudul::after {
+    content: "✦";
+    display: block;
+
+    margin: 12px auto 0;
+
+    font-size: 10px;
+    color: #999;
+}
+
+.mempelai h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 1px;
+
+    margin: 0;
+
+    color: #333;
+
+    transition: transform 0.3s ease;
+}
+
+.mempelai h2:first-of-type::after {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    background: rgba(80, 80, 80, 0.3);
+
+    margin: 12px auto 0;
+}
+
+.mempelai h2:last-of-type::before {
+    content: "";
+
+    display: block;
+
+    width: 35px;
+    height: 1px;
+
+    background: rgba(80, 80, 80, 0.3);
+
+    margin: 0 auto 12px;
+}
+
+.mempelai h2:hover,
+.mempelai h2:active {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   TANDA &
+   ========================= */
+
+.mempelai .dan-home {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+    font-weight: 300;
+
+    margin: 14px 0;
+
+    color: #888;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   FOTO MEMPELAI
+   ========================= */
+
+.mempelai .foto-mempelai {
+    width: 180px;
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 100px;
+
+    margin: 0 0 12px;
+
+    border: 1px solid rgba(80, 80, 80, 0.25);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.3s ease;
+}
+
+.mempelai .foto-mempelai:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   ORANG TUA
+   ========================= */
+
+.mempelai .orangtua {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 400;
+
+    color: #666;
+
+    margin: 15px 0 5px;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   INSTAGRAM
+   ========================= */
+
+.mempelai .instagram-mempelai {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    font-size: 20px;
+
+    color: #777;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.mempelai .instagram-mempelai:hover {
+    color: #333;
+
+    transform: scale(1.12);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .mempelai {
+        padding: 80px 20px;
+    }
+
+    .mempelai .subjudul {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+
+    .mempelai h2 {
+        font-size: 36px !important;
+    }
+
+    .mempelai .dan-home {
+        font-size: 28px;
+        margin: 14px 0;
+    }
+
+    .mempelai .foto-mempelai {
+        width: 180px;
+        height: 220px;
+    }
+
+    .mempelai .orangtua {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-top: 12px;
+    }
+
+    .mempelai .instagram-mempelai {
+        font-size: 20px;
+    }
+}
+/* =========================
+   ANIMASI MEMPELAI SAAT SCROLL
+   ========================= */
+
+.mempelai .animasi-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.mempelai.animasi-aktif .animasi-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+   ANIMASI MEMPELAI
+   ============================== */
+
+.mempelai .animasi-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.mempelai.animasi-aktif .animasi-scroll {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* URUTAN ANIMASI */
+
+.mempelai.animasi-aktif .urutan-1 {
+    transition-delay: 0.1s;
+}
+
+.mempelai.animasi-aktif .urutan-2 {
+    transition-delay: 0.4s;
+}
+
+.mempelai.animasi-aktif .urutan-3 {
+    transition-delay: 0.7s;
+}
+
+.mempelai.animasi-aktif .urutan-4 {
+    transition-delay: 1.0s;
+}
+
+.mempelai.animasi-aktif .urutan-5 {
+    transition-delay: 1.3s;
+}
+
+.mempelai.animasi-aktif .urutan-6 {
+    transition-delay: 1.6s;
+}
+
+.mempelai.animasi-aktif .urutan-7 {
+    transition-delay: 1.9s;
+}
+
+.mempelai.animasi-aktif .urutan-8 {
+    transition-delay: 2.2s;
+}
+
+.mempelai.animasi-aktif .urutan-9 {
+    transition-delay: 2.5s;
+}
+
+.mempelai.animasi-aktif .urutan-10 {
+    transition-delay: 2.8s;
+}
+
+/* =========================
+   ANIMASI COUNTDOWN SAAT SCROLL
+   ========================= */
+
+.countdown .animasi-countdown {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.countdown.animasi-aktif .animasi-countdown {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Urutan kemunculan */
+
+.countdown.animasi-aktif .animasi-countdown:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.countdown.animasi-aktif .animasi-countdown:nth-child(2) {
+    transition-delay: 0.4s;
+}
+
+.countdown.animasi-aktif .animasi-countdown:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+.countdown.animasi-aktif .animasi-countdown:nth-child(4) {
+    transition-delay: 1.0s;
+}
+
+.countdown.animasi-aktif .animasi-countdown:nth-child(5) {
+    transition-delay: 1.3s;
+}
+
+/* ==============================
+   SECTION ACARA
+   ============================== */
+
+.acara {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 100px 25px;
+
+    text-align: center;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+/* ITEM ACARA */
+
+.acara-item {
+    width: 100%;
+    max-width: 600px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 100px;
+}
+
+
+/* ITEM TERAKHIR */
+
+.acara-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* JUDUL */
+
+.acara-item h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #b40000;
+}
+
+
+/* GARIS */
+
+.garis-acara {
+    width: 210px;
+    height: 1px;
+
+    background: #b40000;
+
+    margin: 18px 0 22px;
+}
+
+
+/* TANGGAL */
+
+.tanggal-acara {
+    margin: 0 0 12px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+
+    color: #333;
+}
+
+
+/* JAM */
+
+.jam-acara {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+
+    color: #333;
+}
+
+
+/* IKON GEDUNG */
+
+.ikon-acara {
+    width: 210px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 28px 0 22px;
+
+    color: #b40000;
+
+    position: relative;
+}
+
+.ikon-acara::before,
+.ikon-acara::after {
+    content: "";
+
+    width: 85px;
+    height: 1px;
+
+    background: #b40000;
+
+    position: absolute;
+    top: 50%;
+}
+
+.ikon-acara::before {
+    right: 50%;
+    margin-right: 15px;
+}
+
+.ikon-acara::after {
+    left: 50%;
+    margin-left: 15px;
+}
+
+.ikon-acara i {
+    font-size: 24px;
+
+    background: transparent;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* NAMA TEMPAT */
+
+.acara-item h3 {
+    margin: 0 0 10px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #333;
+}
+
+
+/* ALAMAT */
+
+.alamat-acara {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    color: #555;
+}
+
+
+/* TOMBOL GOOGLE MAPS */
+
+.maps-acara {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 28px;
+
+    padding: 12px 28px;
+
+    min-width: 150px;
+
+    border-radius: 30px;
+
+    background: #b40000;
+    color: white;
+
+    text-decoration: none;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+.maps-acara:hover {
+    background: #8f0000;
+
+    transform: translateY(-2px);
+}
+
+.maps-acara i {
+    font-size: 13px;
+}
+
+
+@media (max-width: 600px) {
+
+    /* ==============================
+       ACARA - TAMPILAN HP
+       ============================== */
+
+    .acara {
+        min-height: 100vh;
+        padding: 75px 30px 70px;
+    }
+
+    /* Setiap acara */
+    .acara-item {
+        width: 100%;
+        max-width: 320px;
+        margin-bottom: 65px;
+    }
+
+    .acara-item:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Judul */
+    .acara-item h2 {
+        font-size: 34px;
+        letter-spacing: 2px;
+    }
+
+    /* Garis bawah judul */
+    .garis-acara {
+        width: 145px;
+        margin: 13px 0 23px;
+    }
+
+    /* Tanggal */
+    .tanggal-acara {
+        margin-bottom: 10px;
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    /* Jam */
+    .jam-acara {
+        font-size: 17px;
+        line-height: 1.4;
+    }
+
+    /* Ikon gedung + garis */
+    .ikon-acara {
+        width: 180px;
+        margin: 24px 0 22px;
+    }
+
+    .ikon-acara::before,
+    .ikon-acara::after {
+        width: 65px;
+    }
+
+    .ikon-acara i {
+        font-size: 20px;
+    }
+
+    /* Nama tempat */
+    .acara-item h3 {
+        max-width: 280px;
+        margin-bottom: 9px;
+
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    /* Alamat */
+    .alamat-acara {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Google Maps */
+    .maps-acara {
+        margin-top: 22px;
+        padding: 11px 24px;
+
+        min-width: 150px;
+
+        font-size: 13px;
+        letter-spacing: 0.8px;
+    }
+}
+/* ==============================
+   ANIMASI SECTION ACARA
+   ============================== */
+
+.acara-item > * {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.acara.animasi-aktif .acara-item > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* PEMBERKATAN */
+
+.acara-item:nth-child(1) h2 {
+    transition-delay: 0.1s;
+}
+
+.acara-item:nth-child(1) .garis-acara {
+    transition-delay: 0.25s;
+}
+
+.acara-item:nth-child(1) .tanggal-acara {
+    transition-delay: 0.4s;
+}
+
+.acara-item:nth-child(1) .jam-acara {
+    transition-delay: 0.55s;
+}
+
+.acara-item:nth-child(1) .ikon-acara {
+    transition-delay: 0.7s;
+}
+
+.acara-item:nth-child(1) h3 {
+    transition-delay: 0.85s;
+}
+
+.acara-item:nth-child(1) .alamat-acara {
+    transition-delay: 1s;
+}
+
+.acara-item:nth-child(1) .maps-acara {
+    transition-delay: 1.15s;
+}
+
+
+/* RESEPSI */
+
+.acara-item:nth-child(2) h2 {
+    transition-delay: 1.5s;
+}
+
+.acara-item:nth-child(2) .garis-acara {
+    transition-delay: 1.65s;
+}
+
+.acara-item:nth-child(2) .tanggal-acara {
+    transition-delay: 1.8s;
+}
+
+.acara-item:nth-child(2) .jam-acara {
+    transition-delay: 1.95s;
+}
+
+.acara-item:nth-child(2) .ikon-acara {
+    transition-delay: 2.1s;
+}
+
+.acara-item:nth-child(2) h3 {
+    transition-delay: 2.25s;
+}
+
+.acara-item:nth-child(2) .alamat-acara {
+    transition-delay: 2.4s;
+}
+
+.acara-item:nth-child(2) .maps-acara {
+    transition-delay: 2.55s;
+}
+
+/* ==============================
+   GALERI FOTO
+   ============================== */
+
+.galeri {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 100px 30px;
+
+    text-align: center;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100vh;
+    background-position: center top;
+    background-repeat: repeat-y;
+
+    position: relative;
+}
+
+
+/* SUBJUDUL */
+
+.subjudul-galeri {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    color: #888;
+}
+
+
+/* JUDUL */
+
+.galeri h2 {
+    margin: 0 0 40px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 42px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #333;
+}
+
+
+/* GRID FOTO */
+
+.galeri-grid {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+/* FOTO */
+
+.galeri-foto {
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    display: block;
+
+    cursor: pointer;
+
+    border-radius: 4px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.galeri-foto:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+
+/* ==============================
+   LIGHTBOX
+   ============================== */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* AKTIF */
+
+.lightbox.aktif {
+    display: flex;
+}
+
+
+/* FOTO BESAR */
+
+.lightbox img {
+    max-width: 88%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 3px;
+}
+
+
+/* TOMBOL TUTUP */
+
+.lightbox-tutup {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 38px;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+
+/* TOMBOL PREV / NEXT */
+
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    color: white;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    line-height: 35px;
+
+    cursor: pointer;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+
+/* ==============================
+   GALERI HP
+   ============================== */
+
+@media (max-width: 600px) {
+
+    .galeri {
+        min-height: 100vh;
+
+        padding: 75px 18px;
+
+        background-image: url("background-home.png");
+        background-size: 100% 100vh;
+        background-position: center top;
+        background-repeat: repeat-y;
+    }
+
+    .subjudul-galeri {
+        font-size: 13px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .galeri h2 {
+        font-size: 36px;
+
+        margin-bottom: 28px;
+    }
+
+    .galeri-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px;
+    }
+
+    .galeri-foto {
+        border-radius: 3px;
+    }
+
+    .lightbox img {
+        max-width: 92%;
+        max-height: 78vh;
+    }
+
+    .lightbox-prev,
+    .lightbox-next {
+        width: 36px;
+        height: 36px;
+
+        font-size: 27px;
+    }
+
+    .lightbox-prev {
+        left: 10px;
+    }
+
+    .lightbox-next {
+        right: 10px;
+    }
+
+    .lightbox-tutup {
+        top: 12px;
+        right: 15px;
+
+        font-size: 34px;
+    }
+}
+
+/* ==============================
+   ANIMASI FOTO GALERI
+   ============================== */
+
+.galeri-foto {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.galeri-foto.animasi-foto-aktif {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   WEDDING GIFT
+========================================= */
+
+.wedding-gift {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 25px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* KARTU UTAMA */
+
+.wedding-gift-box {
+    width: 100%;
+    max-width: 620px;
+    box-sizing: border-box;
+    padding: 55px 45px;
+    background: transparent;
+    text-align: center;
+}
+
+
+.wedding-gift-box h2 {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+    font-weight: 400;
+
+    letter-spacing: 4px;
+
+    color: #333333;
+}
+
+
+.gift-pembuka {
+    max-width: 480px;
+
+    margin: 0 auto 30px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #333;
+}
+
+
+/* TOMBOL BUKA */
+
+.tombol-gift {
+    border: none;
+
+    padding: 13px 32px;
+
+    border-radius: 30px;
+
+    background: rgba(80, 80, 80, 0.55);
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.tombol-gift:hover {
+    background: rgba(50, 50, 50, 0.70);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   POPUP
+========================================= */
+
+.gift-modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: none;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 25px 15px;
+
+    box-sizing: border-box;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    overflow-y: auto;
+}
+
+
+.gift-modal.aktif {
+    display: flex;
+}
+
+
+/* KOTAK POPUP */
+
+.gift-modal-box {
+    width: 100%;
+    max-width: 500px;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    padding: 35px 20px 40px;
+
+    background: #f7f7f7;
+
+    border-radius: 6px;
+}
+
+
+/* TOMBOL CLOSE */
+
+.gift-tutup {
+    position: absolute;
+
+    top: 8px;
+    right: 10px;
+
+    width: 35px;
+    height: 35px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 32px;
+    line-height: 30px;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+
+.gift-modal-box > h2 {
+    margin: 0 0 5px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 29px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+.gift-modal-pembuka {
+    margin: 0 auto 18px;
+
+    max-width: 360px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #444;
+}
+
+
+/* =========================================
+   REKENING
+========================================= */
+
+.rekening-card {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    min-height: 130px;
+
+    margin-bottom: 10px;
+
+    padding: 20px 18px;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8edf0,
+            #ffffff,
+            #dce3e7
+        );
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+
+    overflow: hidden;
+}
+
+
+/* pola dekorasi */
+
+.rekening-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -90px;
+    bottom: -130px;
+
+    border-radius: 50%;
+
+    border: 25px solid rgba(255,255,255,0.45);
+
+    pointer-events: none;
+}
+
+
+.bank-header {
+    text-align: right;
+
+    position: relative;
+
+    z-index: 1;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: #0754b8;
+}
+
+
+.rekening-nomor {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 15px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    color: #111;
+}
+
+
+.rekening-nama {
+    position: relative;
+
+    z-index: 1;
+
+    margin-top: 4px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    color: #222;
+}
+
+
+.tombol-salin {
+    position: absolute;
+
+    right: 12px;
+    bottom: 10px;
+
+    z-index: 2;
+
+    border: none;
+
+    padding: 6px 12px;
+
+    border-radius: 4px;
+
+    background: #666;
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+
+.tombol-salin:hover {
+    background: #333;
+}
+
+
+/* =========================================
+   KIRIM KADO
+========================================= */
+
+.kirim-kado {
+    position: relative;
+
+    margin-top: 10px;
+
+    padding: 20px 15px 50px;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8edf0,
+            #ffffff,
+            #dce3e7
+        );
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+
+    overflow: hidden;
+}
+
+
+.kirim-kado h3 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+.garis-gift {
+    width: 70px;
+    height: 1px;
+
+    margin: 8px auto 15px;
+
+    background: #999;
+}
+
+
+.nama-penerima {
+    margin: 0 0 7px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    color: #222;
+}
+
+
+.alamat-kado {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    line-height: 1.5;
+
+    color: #333;
+}
+
+
+/* =========================================
+   KONFIRMASI
+========================================= */
+
+.konfirmasi-gift {
+    margin-top: 10px;
+
+    padding: 20px 10px 15px;
+
+    border-radius: 7px;
+
+    background: #e9e9e9;
+}
+
+
+.konfirmasi-gift h3 {
+    margin: 0;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 22px;
+    font-weight: 500;
+
+    color: #222;
+}
+
+
+.konfirmasi-pembuka {
+    margin: 8px auto 18px;
+
+    max-width: 350px;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #444;
+}
+
+
+#formWeddingGift {
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+
+#formWeddingGift > label {
+    margin: 0 0 6px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #333;
+}
+
+
+#formWeddingGift > input[type="text"],
+#formWeddingGift > input[type="number"] {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 10px;
+
+    margin-bottom: 13px;
+
+    border: 1px solid #999;
+
+    border-radius: 3px;
+
+    background: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+
+#formWeddingGift > input:focus {
+    border-color: #b40000;
+}
+
+
+/* RADIO */
+
+.pilihan-gift {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+}
+
+
+.pilihan-gift label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #333;
+
+    cursor: pointer;
+}
+
+
+.pilihan-gift input {
+    margin: 0;
+}
+
+
+/* KONFIRMASI */
+
+.tombol-konfirmasi {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 2px;
+
+    background: #000;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+
+.tombol-konfirmasi:hover {
+    background: #333;
+}
+
+
+/* HASIL KONFIRMASI */
+
+.hasil-konfirmasi {
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 18px 10px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 5px;
+}
+
+
+.hasil-konfirmasi.aktif {
+    display: block;
+}
+
+
+.ikon-berhasil {
+    width: 35px;
+    height: 35px;
+
+    margin: 0 auto 8px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #b40000;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+.hasil-konfirmasi h4 {
+    margin: 0 0 5px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+    font-weight: 500;
+}
+
+
+.hasil-konfirmasi p {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
+
+@media (max-width: 600px) {
+
+    .wedding-gift {
+        min-height: 100vh;
+
+        padding: 75px 18px;
+    }
+
+
+    .wedding-gift-box {
+        padding: 45px 22px;
+
+        border-width: 4px;
+    }
+
+
+    .wedding-gift-box h2 {
+        font-size: 32px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .gift-pembuka {
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        margin-bottom: 25px;
+    }
+
+
+    .tombol-gift {
+        padding: 12px 27px;
+
+        font-size: 15px;
+    }
+
+
+    .gift-modal {
+        padding: 15px 8px;
+    }
+
+
+    .gift-modal-box {
+        padding: 35px 10px 30px;
+
+        border-radius: 5px;
+    }
+
+
+    .gift-modal-box > h2 {
+        font-size: 27px;
+    }
+
+
+    .gift-modal-pembuka {
+        font-size: 13px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .rekening-card {
+        min-height: 125px;
+
+        padding: 17px 12px;
+    }
+
+
+    .rekening-nomor {
+        font-size: 15px;
+    }
+
+
+    .kirim-kado {
+        padding: 18px 10px 48px;
+    }
+
+
+    .konfirmasi-gift {
+        padding: 18px 9px 14px;
+    }
+
+}
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 25px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.rsvp-box {
+    width: 100%;
+    max-width: 520px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+.rsvp-label {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+
+    letter-spacing: 4px;
+    color: #777;
+}
+
+
+.rsvp-box h2 {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 38px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+    color: #333;
+}
+
+
+.rsvp-pembuka {
+    max-width: 420px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    line-height: 1.8;
+    color: #555;
+}
+
+
+/* FORM */
+
+#formRSVP {
+    width: 100%;
+    text-align: left;
+}
+
+
+.rsvp-field {
+    margin-bottom: 22px;
+}
+
+
+.rsvp-field > label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    color: #444;
+}
+
+
+/* INPUT */
+
+#formRSVP input[type="text"],
+#formRSVP select {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+
+    color: #333;
+
+    outline: none;
+}
+
+
+#formRSVP input[type="text"]:focus,
+#formRSVP select:focus {
+
+    border-color: #999;
+}
+
+
+/* PILIHAN KEHADIRAN */
+
+.pilihan-rsvp {
+    display: flex;
+    gap: 12px;
+}
+
+
+.pilihan-item {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+
+    color: #444;
+
+    cursor: pointer;
+}
+
+
+.pilihan-item input {
+    accent-color: #666;
+}
+
+
+/* TOMBOL */
+
+.tombol-rsvp {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: rgba(80, 80, 80, 0.60);
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.tombol-rsvp:hover {
+
+    background: rgba(50, 50, 50, 0.75);
+
+    transform: translateY(-2px);
+}
+
+
+.tombol-rsvp:disabled {
+
+    opacity: 0.6;
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* HASIL */
+
+.hasil-rsvp {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 30px 10px;
+}
+
+
+.hasil-rsvp.aktif {
+    display: block;
+}
+
+
+.ikon-rsvp {
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #777;
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    color: #555;
+}
+
+
+.hasil-rsvp h3 {
+
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #333;
+}
+
+
+.hasil-rsvp p {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 16px;
+
+    color: #555;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .rsvp {
+        padding: 80px 20px;
+    }
+
+
+    .rsvp-box h2 {
+        font-size: 34px;
+    }
+
+
+    .rsvp-pembuka {
+        font-size: 16px;
+    }
+
+
+    .pilihan-rsvp {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    .pilihan-item {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+
+/* =========================
+   UCAPAN & DOA
+========================= */
+
+.ucapan {
+    width: 100%;
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 100px 25px;
+
+    background-image: url("background-home.png");
+    background-size: 100% 100vh;
+    background-position: center top;
+    background-repeat: repeat-y;
+}
+
+
+.ucapan-box {
+    width: 100%;
+    max-width: 620px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+.ucapan-label {
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    color: #777;
+}
+
+
+.ucapan-box > h2 {
+    margin: 0 0 18px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 38px;
+    font-weight: 400;
+
+    letter-spacing: 2px;
+
+    color: #333;
+}
+
+
+.ucapan-pembuka {
+    max-width: 430px;
+
+    margin: 0 auto 35px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #555;
+}
+
+
+/* =========================
+   FORM UCAPAN
+========================= */
+
+#formUcapan {
+    width: 100%;
+
+    text-align: left;
+}
+
+
+.ucapan-field {
+    margin-bottom: 22px;
+}
+
+
+.ucapan-field label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+
+    color: #444;
+}
+
+
+#formUcapan input[type="text"],
+#formUcapan textarea {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #cfcfcf;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    color: #333;
+
+    outline: none;
+}
+
+
+#formUcapan textarea {
+
+    resize: vertical;
+
+    min-height: 130px;
+
+    line-height: 1.6;
+}
+
+
+#formUcapan input[type="text"]:focus,
+#formUcapan textarea:focus {
+
+    border-color: #999;
+}
+
+
+/* =========================
+   TOMBOL UCAPAN
+========================= */
+
+.tombol-ucapan {
+
+    display: block;
+
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background: rgba(80, 80, 80, 0.60);
+
+    color: white;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.tombol-ucapan:hover {
+
+    background: rgba(50, 50, 50, 0.75);
+
+    transform: translateY(-2px);
+}
+
+
+.tombol-ucapan:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+
+    transform: none;
+}
+
+
+/* =========================
+   HASIL BERHASIL
+========================= */
+
+.hasil-ucapan {
+
+    display: none;
+
+    padding: 30px 10px;
+}
+
+
+.hasil-ucapan.aktif {
+    display: block;
+}
+
+
+.ikon-ucapan {
+
+    width: 48px;
+    height: 48px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #777;
+
+    border-radius: 50%;
+
+    font-size: 24px;
+
+    color: #555;
+}
+
+
+.hasil-ucapan h3 {
+
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    color: #333;
+}
+
+
+.hasil-ucapan p {
+
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    color: #555;
+}
+
+
+/* =========================
+   DAFTAR UCAPAN
+========================= */
+
+.daftar-ucapan {
+
+    margin-top: 55px;
+
+    text-align: left;
+}
+
+
+.daftar-ucapan > h3 {
+
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 24px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+
+    color: #444;
+}
+
+
+/* =========================
+   LIST UCAPAN
+========================= */
+
+.list-ucapan {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   KARTU UCAPAN
+========================= */
+
+.kartu-ucapan {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 18px 20px;
+
+    border: 1px solid rgba(120, 120, 120, 0.25);
+
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.30);
+}
+
+
+.kartu-ucapan-nama {
+
+    margin: 0 0 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    color: #333;
+}
+
+
+/*
+   BAGIAN INI MEMBATASI
+   PANJANG UCAPAN
+*/
+
+.kartu-ucapan-isi {
+
+    max-height: 85px;
+
+    margin: 0;
+
+    overflow-y: auto;
+
+    padding-right: 8px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #555;
+
+    white-space: pre-wrap;
+
+    word-break: break-word;
+}
+
+
+/* =========================
+   SCROLLBAR UCAPAN
+========================= */
+
+.kartu-ucapan-isi::-webkit-scrollbar {
+
+    width: 4px;
+}
+
+
+.kartu-ucapan-isi::-webkit-scrollbar-track {
+
+    background: rgba(0, 0, 0, 0.05);
+
+    border-radius: 10px;
+}
+
+
+.kartu-ucapan-isi::-webkit-scrollbar-thumb {
+
+    background: rgba(80, 80, 80, 0.35);
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   PESAN KOSONG / MEMUAT
+========================= */
+
+.memuat-ucapan,
+.ucapan-kosong {
+
+    margin: 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+    color: #777;
+}
+
+
+/* =========================
+   PAGINATION
+========================= */
+
+.pagination-ucapan {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.tombol-halaman {
+
+    min-width: 38px;
+    height: 38px;
+
+    padding: 0 10px;
+
+    border: 1px solid rgba(100, 100, 100, 0.30);
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    color: #555;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+
+.tombol-halaman:hover {
+
+    background: rgba(80, 80, 80, 0.15);
+}
+
+
+.tombol-halaman.aktif {
+
+    background: rgba(80, 80, 80, 0.60);
+
+    color: white;
+
+    border-color: transparent;
+}
+
+
+.tombol-halaman:disabled {
+
+    opacity: 0.35;
+
+    cursor: default;
+}
+
+
+.info-halaman {
+
+    min-width: 55px;
+
+    text-align: center;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 15px;
+
+    color: #666;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .ucapan {
+        background-image: url("background-home.png");
+        background-size: 100% 100vh;
+        background-position: center top;
+        background-repeat: repeat-y;
+}   
+
+
+    .ucapan-box > h2 {
+
+        font-size: 34px;
+
+    }
+
+
+    .ucapan-pembuka {
+
+        font-size: 16px;
+
+    }
+
+
+    .kartu-ucapan {
+
+        padding: 16px;
+
+    }
+
+
+    .kartu-ucapan-nama {
+
+        font-size: 17px;
+
+    }
+
+
+    .kartu-ucapan-isi {
+
+        max-height: 90px;
+
+        font-size: 15px;
+
+        line-height: 1.6;
+
+    }
+
+
+    .pagination-ucapan {
+
+        gap: 6px;
+
+    }
+
+
+    .tombol-halaman {
+
+        min-width: 36px;
+
+        height: 36px;
+
+    }
+
+}
+
+/* =====================================================
+   UCAPAN - LOADING & ERROR
+===================================================== */
+
+.memuat-ucapan {
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 13px;
+    color: #777;
+}
+
+
+.ucapan-error {
+    text-align: center;
+    padding: 20px 10px;
+    color: #777;
+    font-size: 13px;
+}
+
+
+.tombol-muat-ulang {
+    margin-top: 10px;
+    padding: 9px 18px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    background: transparent;
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+
+.tombol-muat-ulang:hover {
+    background: #f5f5f5;
+}
+
+
+/* =====================================================
+   SCROLL UCAPAN PANJANG
+===================================================== */
+
+.kartu-ucapan-isi {
+    max-height: 85px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.pagination-ucapan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 5px 0;
+}
+
+
+.tombol-halaman {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #555;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.tombol-halaman:hover {
+    background: #f1f1f1;
+}
+
+
+.tombol-halaman:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+
+.info-halaman {
+    min-width: 45px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .kartu-ucapan-isi {
+        max-height: 90px;
+    }
+
+
+    .pagination-ucapan {
+        margin-top: 15px;
+        gap: 12px;
+    }
+
+
+    .tombol-halaman {
+        width: 32px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+}
+
+/* =====================================================
+   ANIMASI ISI SECTION
+   BACKGROUND TETAP DIAM
+===================================================== */
+
+
+/* =========================
+   WEDDING GIFT
+========================= */
+
+.wedding-gift-box {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.wedding-gift.animasi-aktif .wedding-gift-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RSVP
+========================= */
+
+.rsvp-box {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.rsvp.animasi-aktif .rsvp-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   UCAPAN & DOA
+========================= */
+
+.ucapan-box {
+    opacity: 0;
+    transform: translateY(35px);
+
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s ease;
+}
+
+.ucapan.animasi-aktif .ucapan-box {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================
+   PENUTUPAN
+========================= */
+
+.penutupan {
+    position: relative;
+    min-height: 100vh;
+
+    background-image: url("penutupan.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* OVERLAY */
+
+.penutupan-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.02) 25%,
+            rgba(0, 0, 0, 0.10) 50%,
+            rgba(0, 0, 0, 0.68) 100%
+        );
+}
+
+
+/* ISI PENUTUPAN */
+
+.penutupan-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 650px;
+
+    padding: 80px 30px 55px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    color: white;
+
+    opacity: 0;
+    transform: translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+
+/* AKTIF SAAT SCROLL */
+
+.penutupan.animasi-aktif .penutupan-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* KALIMAT */
+
+.penutupan-kalimat {
+    margin: 0 auto;
+
+    max-width: 560px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 19px;
+    line-height: 1.8;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* UCAPAN TERIMA KASIH */
+
+.penutupan-terima {
+    margin: 22px auto 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* NAMA PASANGAN */
+
+/* =========================
+   NAMA PENUTUPAN
+========================= */
+
+.penutupan-nama {
+    margin: 30px 0 0;
+
+    font-family: "Allura", cursive;
+
+    font-size: 68px;
+    line-height: 1.1;
+
+    font-weight: 400;
+
+    color: #ffffff;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .penutupan {
+        min-height: 100vh;
+
+        background-position: center center;
+    }
+
+
+    .penutupan-content {
+
+        padding:
+            70px
+            22px
+            45px;
+    }
+
+
+    .penutupan-kalimat {
+
+        font-size: 17px;
+
+        line-height: 1.75;
+    }
+
+
+    .penutupan-terima {
+
+        font-size: 15px;
+
+        line-height: 1.65;
+
+        margin-top: 18px;
+    }
+
+
+    .penutupan-nama {
+        font-size: 54px;
+        margin-top: 25px;
+    }
+
+}
+
+/* =================================
+   WARNA FONT GLOBAL - ABU TUA
+   ================================= */
+
+body {
+    color: #3f3f3f;
+}
+
+
+/* Teks isi semua section */
+
+.save-the-date,
+.countdown,
+.mempelai,
+.acara,
+.galeri,
+.wedding-gift,
+.rsvp,
+.ucapan {
+    color: #3f3f3f;
+}
+
+
+/* Paragraf / teks penjelasan */
+
+.save-the-date p,
+.countdown p,
+.mempelai p,
+.acara p,
+.galeri p,
+.wedding-gift p,
+.rsvp p,
+.ucapan p {
+    color: #4a4a4a;
+}
+
+
+/* Judul section */
+
+.save-the-date h2,
+.countdown h2,
+.mempelai h2,
+.acara h2,
+.galeri h2,
+.wedding-gift h2,
+.rsvp h2,
+.ucapan h2 {
+    color: #3f3f3f !important;
+}
+
+
+/* Label RSVP & Ucapan */
+
+.rsvp-label,
+.ucapan-label {
+    color: #3f3f3f !important;
+}
+
+
+/* Label form */
+
+.rsvp label,
+.ucapan label,
+.wedding-gift label {
+    color: #4a4a4a;
+}
+
+
+/* Tulisan dalam input */
+
+.rsvp input,
+.rsvp select,
+.ucapan input,
+.ucapan textarea,
+.wedding-gift input,
+.wedding-gift select {
+    color: #3f3f3f;
+}
+
+/* =========================
+   WARNA SECTION COUNTDOWN
+   ========================= */
+
+.countdown {
+    color: #3f3f3f;
+}
+
+.countdown .subjudul {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.countdown h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.countdown .teks-save {
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.countdown .waktu span {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.countdown .waktu small {
+    color: #555555;
+    font-weight: 600;
+}
+
+.countdown .kalender {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+/* =========================
+   WARNA SECTION MEMPELAI
+   ========================= */
+
+.mempelai {
+    color: #3f3f3f;
+}
+
+.mempelai .subjudul {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.mempelai h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.mempelai p {
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.mempelai .dan-home {
+    color: #555555;
+    font-weight: 600;
+}
+
+.mempelai .orangtua {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+/* =========================
+   AKSEN MERAH PEMBERKATAN
+   ========================= */
+
+.pemberkatan .subjudul,
+.pemberkatan .judul-acara {
+    color: #b40000 !important;
+}
+
+.pemberkatan .ikon-acara {
+    color: #b40000 !important;
+}
+/* =========================
+   WARNA JUDUL ACARA
+   ========================= */
+
+.acara-item h2 {
+    color: #b40000 !important;
+    font-weight: 600;
+}
+/* =========================
+   PERTEGAS FONT SECTION ACARA
+   ========================= */
+
+.acara-item .tanggal-acara {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.acara-item .jam-acara {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.acara-item h3 {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.acara-item .alamat-acara {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+/* =========================
+   PERTEGAS FONT OUR GALLERY
+   ========================= */
+
+.galeri h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.galeri p {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+/* =========================
+   PERTEGAS FONT WEDDING GIFT
+   ========================= */
+
+.wedding-gift h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.wedding-gift p {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.wedding-gift .gift-pembuka {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.wedding-gift-box {
+    color: #3f3f3f;
+}
+.gift-modal-box {
+    color: #3f3f3f;
+}
+
+.gift-modal-box h2,
+.gift-modal-box h3 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.gift-modal-box p {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.rekening-nomor {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.rekening-nama {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+
+.nama-penerima {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.alamat-kado {
+    color: #4a4a4a !important;
+    font-weight: 600;
+}
+/* =========================
+   TOMBOL WEDDING GIFT
+   ========================= */
+
+.tombol-gift {
+    background: #b40000 !important;
+    color: #ffffff !important;
+
+    font-weight: 600;
+
+    border: none;
+}
+
+.tombol-gift:hover {
+    background: #8f0000 !important;
+}
+/* =========================
+   PERTEGAS FONT RSVP
+   ========================= */
+
+.rsvp-box {
+    color: #3f3f3f;
+}
+
+.rsvp-label {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.rsvp-box h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.rsvp-pembuka {
+    color: #4a4a4a !important;
+    font-weight: 600;
+}
+
+.rsvp-field label {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.rsvp input,
+.rsvp select {
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+.pilihan-rsvp label {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.pilihan-rsvp span {
+    color: #3f3f3f;
+    font-weight: 600;
+}
+/* =========================
+   TOMBOL RSVP
+   ========================= */
+
+.tombol-rsvp {
+    background: #b40000 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+/* =========================
+   PERTEGAS FONT UCAPAN & DOA
+   ========================= */
+
+.ucapan-box {
+    color: #3f3f3f;
+}
+
+.ucapan-label {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.ucapan-box h2 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.ucapan-pembuka {
+    color: #4a4a4a !important;
+    font-weight: 600;
+}
+
+.ucapan-field label {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.ucapan input,
+.ucapan textarea {
+    color: #3f3f3f;
+    font-weight: 500;
+}
+
+.ucapan input::placeholder,
+.ucapan textarea::placeholder {
+    color: #777;
+}
+
+.tombol-ucapan {
+    background: #b40000 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+/* DAFTAR UCAPAN */
+
+.daftar-ucapan h3 {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.kartu-ucapan-nama {
+    color: #3f3f3f !important;
+    font-weight: 600;
+}
+
+.kartu-ucapan-isi {
+    color: #4a4a4a !important;
+    font-weight: 500;
+}
+
+.halaman-ucapan,
+.info-halaman {
+    color: #4a4a4a;
+    font-weight: 600;
+}
+/* =========================
+   UCAPAN & DOA - LEBIH TEGAS
+   ========================= */
+
+.ucapan-box {
+    color: #252525;
+}
+
+.ucapan-label {
+    color: #252525 !important;
+    font-weight: 700;
+}
+
+.ucapan-box h2 {
+    color: #252525 !important;
+    font-weight: 700;
+}
+
+.ucapan-pembuka {
+    color: #333333 !important;
+    font-weight: 600;
+}
+
+.ucapan-field label {
+    color: #252525 !important;
+    font-weight: 700;
+}
+
+.ucapan input,
+.ucapan textarea {
+    color: #252525 !important;
+    font-weight: 600;
+}
+
+.ucapan input::placeholder,
+.ucapan textarea::placeholder {
+    color: #555555 !important;
+}
+
+.daftar-ucapan h3 {
+    color: #252525 !important;
+    font-weight: 700;
+}
+
+.kartu-ucapan-nama {
+    color: #252525 !important;
+    font-weight: 700;
+}
+
+.kartu-ucapan-isi {
+    color: #333333 !important;
+    font-weight: 600;
+}
+
+.halaman-ucapan,
+.info-halaman {
+    color: #333333 !important;
+    font-weight: 600;
+}
+
+.tombol-ucapan {
+    background: #b40000 !important;
+    color: #ffffff !important;
+    font-weight: 700;
+}

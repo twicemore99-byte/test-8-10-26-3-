@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Wedding Of Ruhady & Vivien</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="musik" loop>
+        <source src="musik.mp3" type="audio/mpeg">
+    </audio> 
+
+    <button id="tombolMusik" onclick="toggleMusik()">🔊</button>
+    
+    <section class="pembuka">
+
+        <p class="judul">THE WEDDING OF</p>
+
+        <h1>Ruhady Wijaya</h1>
+
+        <p class="dan-home">&</p>
+
+        <h1>Vivien Carlina</h1>
+
+        <p class="tanggal">6 . 12 . 2026</p>
+
+    </section>
+    <section class="countdown">
+
+    <p class="subjudul animasi-countdown">
+        SAVE THE DATE
+    </p>
+
+    <h2 class="animasi-countdown">
+        6 . 12 . 2026
+    </h2>
+
+    </p>
+
+    <div class="waktu animasi-countdown">
+
+        <div>
+            <span id="hari">00</span>
+            <small>Hari</small>
+        </div>
+
+        <div>
+            <span id="jam">00</span>
+            <small>Jam</small>
+        </div>
+
+        <div>
+            <span id="menit">00</span>
+            <small>Menit</small>
+        </div>
+
+        <div>
+            <span id="detik">00</span>
+            <small>Detik</small>
+        </div>
+
+    </div>
+
+    <button class="kalender animasi-countdown" onclick="tambahKalender()">
+        ♡ ADD TO CALENDAR
+    </button>
+</section>
+<section class="mempelai">
+
+    <p class="subjudul animasi-scroll urutan-1">
+    THE GROOM & BRIDE
+</p>
+
+<img src="pao.jpeg"
+     alt="Ruhady Wijaya"
+     class="foto-mempelai animasi-scroll urutan-2">
+
+<h2 class="animasi-scroll urutan-3">
+    Ruhady Wijaya
+</h2>
+
+<p class="orangtua animasi-scroll urutan-4">
+    Putra Pertama dari<br>
+    Bapak amat<br>
+    & Ibu Sherly
+</p>
+
+<a class="instagram-mempelai animasi-scroll urutan-5"
+   href="https://www.instagram.com/ruhady.wijaya/"
+   target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
+<p class="dan-home animasi-scroll urutan-6">&</p>
+
+<img src="vvv.jpeg"
+     alt="Vivien Carlina"
+     class="foto-mempelai animasi-scroll urutan-7">
+
+<h2 class="animasi-scroll urutan-8">
+    Vivien Carlina
+</h2>
+
+<p class="orangtua animasi-scroll urutan-9">
+    Putri Pertama dari<br>
+    Bapak Suroso<br>
+    & Ibu Christina
+</p>
+
+<a class="instagram-mempelai animasi-scroll urutan-10"
+   href="https://www.instagram.com/viviencarlina/"
+   target="_blank">
+    <i class="fab fa-instagram"></i>
+</a>
+
+</section>
+
+<!-- ==============================
+     ACARA
+     ============================== -->
+
+<section class="acara">
+
+    <!-- PEMBERKATAN -->
+    <div class="acara-item">
+
+        <h2>PEMBERKATAN</h2>
+
+        <div class="garis-acara"></div>
+
+        <p class="tanggal-acara">
+            Minggu, 6 Desember 2026
+        </p>
+
+        <p class="jam-acara">
+            11.00 WIB – Selesai
+        </p>
+
+        <div class="ikon-acara">
+            <i class="fas fa-building"></i>
+        </div>
+
+        <h3>
+            Gedung Serbaguna HOK ANN KIONG
+        </h3>
+
+        <p class="alamat-acara">
+            Jl. Diponegoro No.99,<br>
+            Bengkalis, Riau
+        </p>
+
+        <a
+            href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwiYhJ7JtaeXAxUAAAAAHQAAAAAQCw..i&rlz=1C1CHBD_idID1130ID1130&mstk=AUtExfC4rCD8HUCyFckh8AiIv4lP1plKx_mH40XSRrXDz7L6cq_xjBRP-zhmrhB_DV_kJjHvlEG7ebhQvTuxoGB3cdlvdDFBCGKGzkvif2dhdU2D8ZcU_xfmwMC3jHwtju1N5-zwNIjungEXj-eifCkpM929garZjn54RHEpyDcLpGmb2DI&hl=id&pvq=Cg0vZy8xMXJqeDZydjh5gAEBkAEB&fvr=1&cs=0&um=1&ie=UTF-8&fb=1&gl=id&sa=X&ftid=0x31d15fa33b87682f:0xf72c9a084fc97735"
+            target="_blank"
+            class="maps-acara">
+            <i class="fas fa-map-marker-alt"></i>
+            GOOGLE MAPS
+        </a>
+
+    </div>
+
+
+    <!-- RESEPSI -->
+    <div class="acara-item">
+
+        <h2>RESEPSI</h2>
+
+        <div class="garis-acara"></div>
+
+        <p class="tanggal-acara">
+            Minggu, 6 Desember 2026
+        </p>
+
+        <p class="jam-acara">
+            19.00 WIB – Selesai
+        </p>
+
+        <div class="ikon-acara">
+            <i class="fas fa-building"></i>
+        </div>
+
+        <h3>
+            GOR Pacceka
+        </h3>
+
+        <p class="alamat-acara">
+            Jalan Tandun, Gg. Pacceka,<br>
+            Bengkalis, Riau
+        </p>
+
+        <a
+            href="https://www.google.com/maps/place/PACCEKA+BADMINTON/@1.4748385,102.1097536,17z/data=!3m1!4b1!4m6!3m5!1s0x31d15fceeda20e33:0xfed9ef4279bbf3a8!8m2!3d1.4748385!4d102.1097536!16s%2Fg%2F11b73tqxrj?hl=id&entry=ttu&g_ep=EgoyMDI2MTAwNC4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            class="maps-acara">
+            <i class="fas fa-map-marker-alt"></i>
+            GOOGLE MAPS
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     GALERI FOTO
+     ============================== -->
+
+<section class="galeri">
+
+    <h2>OUR GALLERY</h2>
+
+    <div class="galeri-grid" id="galeriGrid">
+        <!-- Foto dibuat otomatis oleh JavaScript -->
+    </div>
+
+</section>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+    <button class="lightbox-tutup" id="lightboxTutup">
+        ×
+    </button>
+
+    <button class="lightbox-prev" id="lightboxPrev">
+        ‹
+    </button>
+
+    <img id="lightboxFoto" src="" alt="Foto">
+
+    <button class="lightbox-next" id="lightboxNext">
+        ›
+    </button>
+
+</div>
+
+<!-- WEDDING GIFT -->
+
+<section class="wedding-gift">
+
+    <div class="wedding-gift-box">
+
+        <h2>WEDDING GIFT</h2>
+
+        <p class="gift-pembuka">
+            Doa dan kehadiran Anda merupakan hadiah yang sangat berarti bagi kami.
+            Jika berkenan memberikan tanda kasih, Anda dapat memberikannya secara cashless
+            melalui Wedding Gift.
+        </p>
+
+        <button class="tombol-gift" id="bukaWeddingGift">
+            🎁 &nbsp; WEDDING GIFT
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- POPUP WEDDING GIFT -->
+
+<div class="gift-modal" id="giftModal">
+
+    <div class="gift-modal-box">
+
+        <button class="gift-tutup" id="tutupWeddingGift">
+            ×
+        </button>
+
+
+        <!-- JUDUL -->
+
+        <h2>Wedding Gift</h2>
+
+        <p class="gift-modal-pembuka">
+            Silakan kirim tanda kasih melalui nomor rekening atau
+            alamat pengiriman berikut :
+        </p>
+
+
+        <!-- REKENING 1 -->
+
+        <div class="rekening-card">
+
+            <div class="bank-header">
+                <span>BCA</span>
+            </div>
+
+            <div class="rekening-nomor">
+                8325062564
+            </div>
+
+            <div class="rekening-nama">
+            Ruhady Wijaya
+            </div>
+
+            <button
+            class="tombol-salin"
+            data-copy="8325062564">
+            ⧉ Salin
+             </button>
+
+         </div>
+
+
+        <!-- REKENING 2 -->
+
+        <div class="rekening-card">
+
+            <div class="bank-header">
+                <span>BCA</span>
+            </div>
+
+            <div class="rekening-nomor">
+            8325098321
+            </div>
+
+            <div class="rekening-nama">
+            Vivien Carlina
+            </div>
+
+            <button
+            class="tombol-salin"
+            data-copy="8325098321">
+            ⧉ Salin
+</button>
+        </div>
+
+
+        <!-- KIRIM KADO -->
+        <div class="kirim-kado">
+
+             <h3>Kirim Kado</h3>
+
+            <div class="garis-gift"></div>
+
+            <p class="nama-penerima">
+                Ruhady Wijaya
+            </p>
+
+        <p class="alamat-kado">
+                Alamat : Jl. Hangtuah No. 199,
+                Toko Mega Asia Sport,
+                Bengkalis, Riau 28712
+                </p>
+
+            <button
+              class="tombol-salin alamat-salin"
+                data-copy="Jl. Hangtuah No. 199, Toko Mega Asia Sport, Bengkalis, Riau 28712">
+             ⧉ Salin
+        </button>
+
+</div>
+
+
+        <!-- KONFIRMASI -->
+
+        <div class="konfirmasi-gift">
+
+            <h3>Konfirmasi Pengiriman</h3>
+
+            <p class="konfirmasi-pembuka">
+                Silakan melakukan konfirmasi pada kolom di bawah
+                untuk mempermudah pendataan :
+            </p>
+
+
+            <form id="formWeddingGift">
+
+
+                <!-- NAMA -->
+
+                <label for="namaPengirim">
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="namaPengirim"
+                    placeholder="Nama Pengirim"
+                    required>
+
+
+                <!-- JENIS HADIAH -->
+
+                <label>
+                    Jenis Hadiah
+                </label>
+
+                <div class="pilihan-gift">
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="jenisHadiah"
+                            value="Transfer uang"
+                            required>
+                        Transfer uang
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="jenisHadiah"
+                            value="Kirim kado">
+                        Kirim kado
+                    </label>
+
+                </div>
+
+
+                <!-- TUJUAN -->
+
+                <label>
+                    Tujuan Pengiriman
+                </label>
+
+                <div class="pilihan-gift">
+
+                <label>
+                <input
+                    type="radio"
+                    name="tujuanPengiriman"
+                    value="BCA a/n Ruhady Wijaya"
+                    required>
+                    BCA a/n Ruhady Wijaya
+                </label>
+
+                <label>
+                <input
+                    type="radio"
+                    name="tujuanPengiriman"
+                    value="BCA a/n Vivien Carlina">
+                    BCA a/n Vivien Carlina
+                </label>
+
+                <label>
+                <input
+                    type="radio"
+                    name="tujuanPengiriman"
+                    value="Kado a/n Ruhady Wijaya">
+                    Kado a/n Ruhady Wijaya
+                </label>
+
+        </div>
+
+
+                <!-- NOMINAL -->
+
+                <label for="nominalTransfer">
+                    Nominal (jika transfer)
+                </label>
+
+                <input
+                    type="number"
+                    id="nominalTransfer"
+                    placeholder="Misal: 500000"
+                    min="0">
+
+
+                <!-- TOMBOL -->
+
+                <button
+                    type="submit"
+                    class="tombol-konfirmasi">
+                    Konfirmasi
+                </button>
+
+            </form>
+
+
+            <!-- HASIL KONFIRMASI -->
+
+            <div
+                class="hasil-konfirmasi"
+                id="hasilKonfirmasi">
+
+                <div class="ikon-berhasil">
+                    ✓
+                </div>
+
+                <h4>Terima kasih</h4>
+
+                <p>
+                    Konfirmasi pengiriman Anda sudah dicatat.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- =========================
+     RSVP
+========================= -->
+
+<section class="rsvp">
+
+    <div class="rsvp-box">
+
+        <h2>RSVP FORM</h2>
+
+        <p class="rsvp-pembuka">
+            Kami tidak sabar menunggu hari pernikahan kami
+            bersama Bapak/Ibu/Saudara/i, mohon konfirmasi
+            kehadiran melalui form RSVP di bawah ini.
+        </p>
+
+
+        <form id="formRSVP">
+
+            <!-- NAMA -->
+
+            <div class="rsvp-field">
+
+                <label for="namaRSVP">
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="namaRSVP"
+                    placeholder="Nama Anda"
+                    required>
+
+            </div>
+
+
+            <!-- KEHADIRAN -->
+
+            <div class="rsvp-field">
+
+                <label>
+                    Kehadiran
+                </label>
+
+                <div class="pilihan-rsvp">
+
+                    <label class="pilihan-item">
+
+                        <input
+                            type="radio"
+                            name="kehadiran"
+                            value="Hadir"
+                            required>
+
+                        <span>Hadir</span>
+
+                    </label>
+
+
+                    <label class="pilihan-item">
+
+                        <input
+                            type="radio"
+                            name="kehadiran"
+                            value="Tidak Hadir">
+
+                        <span>Tidak Hadir</span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- JUMLAH ORANG -->
+
+            <div
+                class="rsvp-field"
+                id="jumlahRSVPBox">
+
+                <label for="jumlahRSVP">
+                    Jumlah Orang
+                </label>
+
+                <select id="jumlahRSVP">
+
+                    <option value="1">
+                        1 Orang
+                    </option>
+
+                    <option value="2">
+                        2 Orang
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- TOMBOL -->
+
+            <button
+                type="submit"
+                class="tombol-rsvp">
+
+                KONFIRMASI KEHADIRAN
+
+            </button>
+
+        </form>
+
+
+        <!-- HASIL BERHASIL -->
+
+        <div
+            class="hasil-rsvp"
+            id="hasilRSVP">
+
+            <div class="ikon-rsvp">
+                ✓
+            </div>
+
+            <h3>Terima kasih</h3>
+
+            <p>
+                Konfirmasi kehadiran Anda telah tercatat.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     UCAPAN & DOA
+========================= -->
+
+<section class="ucapan">
+
+    <div class="ucapan-box">
+
+        </p>
+
+        <h2>Ucapan & Doa</h2>
+
+        <p class="ucapan-pembuka">
+            Berikan ucapan dan doa terbaik untuk kami.
+        </p>
+
+
+        <!-- =========================
+             FORM UCAPAN
+        ========================= -->
+
+        <form id="formUcapan">
+
+            <div class="ucapan-field">
+
+                <label for="namaUcapan">
+                    Nama
+                </label>
+
+                <input
+                    type="text"
+                    id="namaUcapan"
+                    placeholder="Nama Anda"
+                    required>
+
+            </div>
+
+
+            <div class="ucapan-field">
+
+                <label for="isiUcapan">
+                    Ucapan & Doa
+                </label>
+
+                <textarea
+                    id="isiUcapan"
+                    placeholder="Tuliskan ucapan dan doa..."
+                    rows="5"
+                    required></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="tombol-ucapan">
+
+                KIRIM UCAPAN
+
+            </button>
+
+        </form>
+
+
+        <!-- =========================
+             PESAN BERHASIL
+        ========================= -->
+
+        <div
+            class="hasil-ucapan"
+            id="hasilUcapan">
+
+            <div class="ikon-ucapan">
+                ✓
+            </div>
+
+            <h3>Terima kasih</h3>
+
+            <p>
+                Ucapan dan doa Anda telah terkirim.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             DAFTAR UCAPAN
+        ========================= -->
+
+        <div class="daftar-ucapan">
+
+            <div
+                class="list-ucapan"
+                id="listUcapan">
+
+                <p class="memuat-ucapan">
+                    Memuat ucapan...
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     PENUTUPAN
+========================= -->
+
+<section class="penutupan">
+
+    <div class="penutupan-overlay"></div>
+
+    <div class="penutupan-content">
+
+        <p class="penutupan-kalimat">
+            Merupakan suatu kebahagiaan dan kehormatan bagi kami,
+            apabila Bapak/Ibu/Saudara/i, berkenan hadir dan
+            memberikan doa restu kepada kami.
+        </p>
+
+        <p class="penutupan-terima">
+            Terima kasih atas doa dan perhatian yang diberikan.
+        </p>
+
+        <p class="penutupan-nama">
+            Ruhady & Vivien
+        </p>
+
+    </div>
+
+</section>
+
+<script>
+    const musik = document.getElementById("musik");
+
+    if (sessionStorage.getItem("putarMusik") === "true") {
+        musik.play();
+    }
+
+    function toggleMusik() {
+
+        if (musik.paused) {
+            musik.play();
+            document.getElementById("tombolMusik").textContent = "🔊";
+        } else {
+            musik.pause();
+            document.getElementById("tombolMusik").textContent = "🔇";
+        }
+
+    }
+</script>
+
+<script>
+    const tanggalAcara = new Date("December 6, 2026 10:00:00").getTime();
+
+    const hitungMundur = setInterval(function () {
+
+        const sekarang = new Date().getTime();
+        const selisih = tanggalAcara - sekarang;
+
+        const hari = Math.floor(selisih / (1000 * 60 * 60 * 24));
+        const jam = Math.floor((selisih % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const menit = Math.floor((selisih % (1000 * 60 * 60)) / (1000 * 60));
+        const detik = Math.floor((selisih % (1000 * 60)) / 1000);
+
+        document.getElementById("hari").textContent = hari;
+        document.getElementById("jam").textContent = jam;
+        document.getElementById("menit").textContent = menit;
+        document.getElementById("detik").textContent = detik;
+
+        if (selisih < 0) {
+            clearInterval(hitungMundur);
+
+            document.getElementById("hari").textContent = "00";
+            document.getElementById("jam").textContent = "00";
+            document.getElementById("menit").textContent = "00";
+            document.getElementById("detik").textContent = "00";
+        }
+
+    }, 1000);
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>
+
